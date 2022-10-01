@@ -5,6 +5,9 @@ export var speed = 15000
 signal player_killed
 signal projectile_hit
 
+func _ready():
+	get_tree().call_group("enemies", "set_player", self)
+
 func _process(delta):
 	var velocity = Vector2.ZERO
 	if Input.is_action_pressed("move_down"):

@@ -7,9 +7,9 @@
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 15.0949
-height = 5.80914
+height = 7.8102
 
-[node name="Enemy" type="RigidBody2D"]
+[node name="Enemy" type="RigidBody2D" groups=["enemies"]]
 position = Vector2( 690, 379 )
 collision_layer = 26
 collision_mask = 3
@@ -23,17 +23,19 @@ projectile_speed = 400
 projectile_offset = 50
 
 [node name="Sprite" type="Sprite" parent="."]
+rotation = 1.5708
 texture = ExtResource( 3 )
 
 [node name="Indicator" type="Sprite" parent="."]
 self_modulate = Color( 0.623529, 0.160784, 0.160784, 1 )
-position = Vector2( 0, -34 )
+position = Vector2( 34, 0 )
+rotation = 1.5708
 scale = Vector2( 0.332026, 0.332026 )
 texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 3 )
-rotation = -0.00794696
+position = Vector2( -3, 0 )
+rotation = 1.5708
 shape = SubResource( 1 )
 
 [connection signal="projectile_hit" from="." to="." method="_on_Enemy_projectile_hit"]

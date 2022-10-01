@@ -1,7 +1,6 @@
 - move enemies by pressing button
-- add direction indicator for enemies
-- reposition enemies after triggering
 - reload level
+- delete bullets on exit screen
 - score
 - main menu
 - sounds
@@ -16,3 +15,6 @@
 - player interaction with trigger?
 - projectiles split when time triggered
 - second lance that duplicates stuff?
+- better indicator when moving enemies
+- 
+- reposition enemies after triggering
