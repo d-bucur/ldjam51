@@ -4,12 +4,12 @@ export(PackedScene) var enemy_template
 export var time_to_full_rotation = 10
 
 var rotation_speed
+var score = 0
 
 func _ready():
 	rotation_speed = 2 * PI / time_to_full_rotation
 	randomize()
-	$DeathScreen.hide()
-	spawn_enemy()
+	$UI/DeathScreen.hide()
 
 
 func _process(delta):
@@ -25,6 +25,7 @@ func spawn_enemy():
 	enemy.position = spawn_location.global_position
 	# TODO bug: don't shoot on first spawn
 	enemy.set_player($Player)
+	enemy.connect("enemy_killed", $".", "_on_Enemy_enemy_killed")
 	add_child(enemy)
 
 
@@ -41,8 +42,13 @@ func _on_Lance_body_entered(body):
 
 
 func _on_Player_player_killed():
-	$DeathScreen.show()
+	$UI/DeathScreen.show()
 
 
 func _on_Restart_pressed():
 	get_tree().reload_current_scene()
+
+
+func _on_Enemy_enemy_killed():
+	score += 1
+	$UI/Score.text = str(score)

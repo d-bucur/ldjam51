@@ -96,21 +96,21 @@ rotation = -1.81663
 position = Vector2( 792, 739 )
 rotation = -2.3857
 
-[node name="DeathScreen" type="Control" parent="."]
+[node name="UI" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = 1024.0
 margin_bottom = 1024.0
 theme = SubResource( 7 )
 
-[node name="Score" type="Label" parent="DeathScreen"]
+[node name="Score" type="Label" parent="UI"]
 margin_left = 34.0
 margin_top = 34.0
 margin_right = 69.0
 margin_bottom = 39.0
-text = "100"
+text = "0"
 
-[node name="Panel" type="Panel" parent="DeathScreen"]
+[node name="DeathScreen" type="Panel" parent="UI"]
 self_modulate = Color( 1, 1, 1, 0.984314 )
 anchor_top = 0.349
 anchor_right = 1.0
@@ -122,7 +122,7 @@ margin_bottom = 7.776
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="DeathScreen/Panel"]
+[node name="Button" type="Button" parent="UI/DeathScreen"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -134,7 +134,7 @@ margin_bottom = 73.5
 shortcut = SubResource( 9 )
 text = "Restart"
 
-[node name="Label" type="Label" parent="DeathScreen/Panel"]
+[node name="Label" type="Label" parent="UI/DeathScreen"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -146,7 +146,7 @@ margin_bottom = -47.0
 text = "Score"
 align = 1
 
-[node name="Label2" type="Label" parent="DeathScreen/Panel"]
+[node name="Label2" type="Label" parent="UI/DeathScreen"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -162,4 +162,7 @@ align = 1
 [connection signal="timeout" from="Level/SpawnTimer" to="." method="_on_SpawnTimer_timeout"]
 [connection signal="lance_triggered" from="Player" to="." method="_on_Player_lance_triggered"]
 [connection signal="player_killed" from="Player" to="." method="_on_Player_player_killed"]
-[connection signal="pressed" from="DeathScreen/Panel/Button" to="." method="_on_Restart_pressed"]
+[connection signal="enemy_killed" from="Enemy" to="." method="_on_Enemy_enemy_killed"]
+[connection signal="enemy_killed" from="Enemy2" to="." method="_on_Enemy_enemy_killed"]
+[connection signal="enemy_killed" from="Enemy3" to="." method="_on_Enemy_enemy_killed"]
+[connection signal="pressed" from="UI/DeathScreen/Button" to="." method="_on_Restart_pressed"]

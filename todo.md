@@ -1,5 +1,4 @@
 - delete bullets on exit screen
-- score
 - main menu
 - sounds
 - sprites
