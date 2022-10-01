@@ -1,5 +1,4 @@
-- move enemies by pressing button
-- reload level
+- reload level on death
 - delete bullets on exit screen
 - score
 - main menu

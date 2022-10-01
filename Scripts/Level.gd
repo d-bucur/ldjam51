@@ -28,8 +28,13 @@ func spawn_enemy():
 
 
 func _on_Area2D_body_entered(body):
-	body.on_lance_triggered()
+	# TODO move to lance script
+	body.emit_signal("lance_triggered")
 
 
 func _on_SpawnTimer_timeout():
+	spawn_enemy()
+
+
+func _on_Player_lance_triggered():
 	spawn_enemy()

@@ -1,4 +1,4 @@
-extends RigidBody2D
+extends KinematicBody2D
 
 export(PackedScene) var projectile_template
 export var projectile_speed = 15000
@@ -6,6 +6,7 @@ export var projectile_offset = 100
 
 signal enemy_killed
 signal projectile_hit
+signal lance_triggered
 
 var player
 
@@ -19,10 +20,6 @@ func shoot():
 	get_parent().add_child(projectile)
 	
 	look_at(player.position)
-
-# TODO replace with signal?
-func on_lance_triggered():
-	shoot()
 	
 func kill():
 	emit_signal("enemy_killed")
@@ -33,3 +30,7 @@ func _on_Enemy_projectile_hit():
 
 func set_player(player_obj):
 	player = player_obj
+
+
+func _on_Enemy_lance_triggered():
+	shoot()

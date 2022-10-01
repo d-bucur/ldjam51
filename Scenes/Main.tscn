@@ -60,6 +60,7 @@ position = Vector2( -15, -486 )
 rotation = 1.57546
 
 [node name="SpawnTimer" type="Timer" parent="Level"]
+wait_time = 4.0
 autostart = true
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
@@ -83,3 +84,4 @@ rotation = -2.3857
 
 [connection signal="body_entered" from="Level/Lance/Area2D" to="Level" method="_on_Area2D_body_entered"]
 [connection signal="timeout" from="Level/SpawnTimer" to="Level" method="_on_SpawnTimer_timeout"]
+[connection signal="lance_triggered" from="Player" to="Level" method="_on_Player_lance_triggered"]
