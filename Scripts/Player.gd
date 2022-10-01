@@ -33,6 +33,7 @@ func _process(delta):
 func kill():
 	print("Player killed")
 	emit_signal("player_killed")
+	queue_free()
 
 
 func _on_Player_projectile_hit():

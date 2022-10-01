@@ -1,11 +1,9 @@
-- reload level on death
 - delete bullets on exit screen
 - score
 - main menu
 - sounds
 - sprites
 - music
-  
 
 - kill enemies when falling off level
 - different enemy types
@@ -15,5 +13,10 @@
 - projectiles split when time triggered
 - second lance that duplicates stuff?
 - better indicator when moving enemies
+
+- enemies drop powerups when killed. You have to pick it up to activate it
+- powerup types:
+  - tnt: explodes in an area when hit
+  - mirror: duplicates the shot in new directions
 - 
 - reposition enemies after triggering

@@ -19,7 +19,10 @@ func shoot():
 	projectile.linear_velocity = velocity.rotated(rotation)
 	get_parent().add_child(projectile)
 	
-	look_at(player.position)
+	if is_instance_valid(player):
+		look_at(player.position)
+	else:
+		print("Could not find player")
 	
 func kill():
 	emit_signal("enemy_killed")
