@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export var speed = 400
+export var speed = 15000
 
 func _process(delta):
 	var velocity = Vector2.ZERO
@@ -17,3 +17,5 @@ func _process(delta):
 		velocity = velocity.normalized() * speed
 		move_and_slide(velocity * delta)
 		
+func on_lance_triggered():
+	pass
