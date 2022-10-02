@@ -17,16 +17,17 @@ func _process(delta):
 	
 	
 func spawn_enemy():
-	print_debug("Spawning new enemy")
+#	print_debug("Spawning new enemy")
 	var enemy = enemy_template.instance()
 	var spawn_location = $Level/Lance/SpawnPath/PathFollow2D
 	
 	spawn_location.offset = randi()
 	enemy.position = spawn_location.global_position
-	# TODO bug: don't shoot on first spawn
-	enemy.set_player($Player)
+	if ($Player):
+		enemy.look_at($Player.position)
+		enemy.set_player($Player)
 	enemy.connect("enemy_killed", $".", "_on_Enemy_enemy_killed")
-	add_child(enemy)
+	$Enemies.add_child(enemy)
 
 
 func _on_SpawnTimer_timeout():
@@ -43,6 +44,7 @@ func _on_Lance_body_entered(body):
 
 func _on_Player_player_killed():
 	$UI/DeathScreen.show()
+	$UI/DeathScreen/ScoreLabel.text = str(score)
 
 
 func _on_Restart_pressed():

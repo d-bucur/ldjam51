@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/Enemy.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Projectile.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/enemySpikey_1.png" type="Texture" id=3]
 [ext_resource path="res://Assets/arrowUp.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/TNT.tscn" type="PackedScene" id=5]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 15.0949
@@ -11,12 +12,14 @@ height = 7.8102
 
 [node name="Enemy" type="KinematicBody2D" groups=["enemies"]]
 position = Vector2( 690, 379 )
-collision_layer = 26
+collision_layer = 58
 collision_mask = 3
 script = ExtResource( 1 )
 projectile_template = ExtResource( 2 )
-projectile_speed = 400
+powerup_template = ExtResource( 5 )
+projectile_speed = 600
 projectile_offset = 50
+powerup_chance = 0.5
 
 [node name="Sprite" type="Sprite" parent="."]
 rotation = 1.5708

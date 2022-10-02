@@ -11,8 +11,12 @@ config_version=4
 [application]
 
 config/name="Ldjam 51"
-run/main_scene="res://Scenes/Main.tscn"
+run/main_scene="res://Scenes/Menu.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Music="*res://Scenes/Music.tscn"
 
 [display]
 
@@ -67,6 +71,7 @@ drag={
 2d_physics/layer_3="other"
 2d_physics/layer_4="triggerable"
 2d_physics/layer_5="damageable"
+2d_physics/layer_6="draggable"
 
 [physics]
 
