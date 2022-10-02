@@ -53,11 +53,13 @@ func _on_Lance_body_entered(body):
 
 
 func _on_Player_player_killed():
+	get_tree().paused = true
 	$UI/DeathScreen.show()
 	$UI/DeathScreen/ScoreLabel.text = str(score)
 
 
 func _on_Restart_pressed():
+	get_tree().paused = false
 	get_tree().reload_current_scene()
 
 

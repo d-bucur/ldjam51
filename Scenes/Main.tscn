@@ -101,6 +101,7 @@ polygon = PoolVector2Array( 0, -512, 91, -508, 245, -455, 387, -345, 478, -198, 
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 479, 713 )
+speed = 20000
 
 [node name="Enemies" type="Node2D" parent="."]
 
@@ -111,7 +112,6 @@ scale = Vector2( 3.57604, 3.57604 )
 [node name="Enemy" parent="Enemies" instance=ExtResource( 6 )]
 position = Vector2( 818, 286 )
 rotation = 2.32981
-scale = Vector2( 1, 1 )
 
 [node name="TNT" parent="Enemies" instance=ExtResource( 2 )]
 position = Vector2( 714, 663 )
@@ -123,13 +123,13 @@ rotation = 0.823215
 [node name="Enemy3" parent="Enemies" instance=ExtResource( 6 )]
 position = Vector2( 666, 613 )
 rotation = -2.65604
-scale = Vector2( 1, 1 )
 
 [node name="Enemy4" parent="Enemies" instance=ExtResource( 6 )]
 position = Vector2( 792, 739 )
 rotation = -2.3857
 
 [node name="UI" type="Control" parent="."]
+pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = 1024.0
