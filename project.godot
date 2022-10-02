@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Ldjam 51"
-run/main_scene="res://Scenes/Menu.tscn"
+run/main_scene="res://Scenes/MenuNew.tscn"
 config/icon="res://icon.png"
 
 [autoload]

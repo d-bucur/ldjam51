@@ -9,8 +9,13 @@
 
 ## juice
 - more animations
+  - particles on cannon death
+  - muzzle when shooting
+  - animation when shooting
+  - explosion animation
 
 ## ideas to explore
+- make objects rigidbodies instead of kinematic
 - player interaction with trigger
 - projectiles split when time triggered
 - second lance that duplicates stuff

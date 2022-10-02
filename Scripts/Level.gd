@@ -13,6 +13,8 @@ var rotation_speed
 var score = 0
 
 func _ready():
+	if !$"/root/Music".playing:
+		$"/root/Music".play()
 	rotation_speed = 2 * PI / time_to_full_rotation
 	randomize()
 	$UI/DeathScreen.hide()
