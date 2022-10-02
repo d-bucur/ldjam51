@@ -42,7 +42,9 @@ func _on_Player_projectile_hit():
 
 func _on_MovementArea_body_entered(body):
 	enemies_in_movement_area[body.get_instance_id()] = body
+	body.emit_signal("drag_start")
 
 
 func _on_MovementArea_body_exited(body):
 	enemies_in_movement_area.erase(body.get_instance_id())
+	body.emit_signal("drag_end")

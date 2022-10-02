@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/Enemy.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Projectile.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/enemySpikey_1.png" type="Texture" id=3]
 [ext_resource path="res://Assets/arrowUp.png" type="Texture" id=4]
 [ext_resource path="res://Scenes/TNT.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/crossair_whiteOutline.png" type="Texture" id=6]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 15.0949
@@ -19,7 +20,14 @@ projectile_template = ExtResource( 2 )
 powerup_template = ExtResource( 5 )
 projectile_speed = 600
 projectile_offset = 50
-powerup_chance = 0.5
+powerup_chance = 0.2
+
+[node name="Highlight" type="Sprite" parent="."]
+visible = false
+self_modulate = Color( 1, 1, 1, 0.345098 )
+position = Vector2( -5, 0 )
+scale = Vector2( 1.69368, 1.69368 )
+texture = ExtResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="."]
 rotation = 1.5708
@@ -37,5 +45,7 @@ position = Vector2( -3, 0 )
 rotation = 1.5708
 shape = SubResource( 1 )
 
+[connection signal="drag_end" from="." to="Highlight" method="hide"]
+[connection signal="drag_start" from="." to="Highlight" method="show"]
 [connection signal="lance_triggered" from="." to="." method="_on_Enemy_lance_triggered"]
 [connection signal="projectile_hit" from="." to="." method="_on_Enemy_projectile_hit"]

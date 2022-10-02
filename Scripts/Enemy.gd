@@ -9,6 +9,8 @@ export var powerup_chance = 1.0
 signal enemy_killed
 signal projectile_hit
 signal lance_triggered
+signal drag_start
+signal drag_end
 
 var player: KinematicBody2D
 var tween: SceneTreeTween
