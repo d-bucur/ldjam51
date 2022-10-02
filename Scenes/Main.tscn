@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Other/UITheme.tres" type="Theme" id=1]
 [ext_resource path="res://Scenes/TNT.tscn" type="PackedScene" id=2]
@@ -11,10 +11,10 @@
 [ext_resource path="res://Scenes/HighlightDeath.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/Audio/creature1.ogg" type="AudioStream" id=10]
 [ext_resource path="res://Assets/Audio/lose5.ogg" type="AudioStream" id=11]
+[ext_resource path="res://Assets/lineart/clock.png" type="Texture" id=12]
+[ext_resource path="res://Assets/lineart/lance.png" type="Texture" id=13]
 
 [sub_resource type="QuadMesh" id=3]
-
-[sub_resource type="SphereMesh" id=4]
 
 [sub_resource type="Curve2D" id=10]
 _data = {
@@ -44,15 +44,13 @@ highlight_death_template = ExtResource( 9 )
 [node name="Level" type="Node2D" parent="."]
 
 [node name="Background" type="MeshInstance2D" parent="Level"]
-self_modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 512, 512 )
 scale = Vector2( 1024.62, 1024 )
 mesh = SubResource( 3 )
 
-[node name="Board" type="MeshInstance2D" parent="Level"]
+[node name="Sprite" type="Sprite" parent="Level"]
 position = Vector2( 512, 512 )
-scale = Vector2( 512, 512 )
-mesh = SubResource( 4 )
+texture = ExtResource( 12 )
 
 [node name="CitySpawnPath" type="Path2D" parent="Level"]
 curve = SubResource( 10 )
@@ -68,11 +66,9 @@ rotation = -0.386871
 [node name="Lance" type="Node2D" parent="Level"]
 position = Vector2( 512, 512 )
 
-[node name="Mesh" type="MeshInstance2D" parent="Level/Lance"]
-self_modulate = Color( 1, 0.0431373, 0.0431373, 0.356863 )
-position = Vector2( 0, -256 )
-scale = Vector2( 9.80625, 512 )
-mesh = SubResource( 3 )
+[node name="Sprite" type="Sprite" parent="Level/Lance"]
+position = Vector2( 0, -223 )
+texture = ExtResource( 13 )
 
 [node name="Area2D" type="Area2D" parent="Level/Lance"]
 visible = false
@@ -88,6 +84,10 @@ curve = SubResource( 5 )
 
 [node name="EnemySpawnTimer" type="Timer" parent="Level/Lance/EnemySpawnPath"]
 wait_time = 4.0
+autostart = true
+
+[node name="EnemyTimerDifficulty" type="Timer" parent="Level/Lance/EnemySpawnPath"]
+wait_time = 10.0
 autostart = true
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Level/Lance/EnemySpawnPath"]
@@ -111,7 +111,6 @@ speed = 20000
 
 [node name="City" parent="Enemies" instance=ExtResource( 7 )]
 position = Vector2( 329, 642 )
-scale = Vector2( 3.57604, 3.57604 )
 
 [node name="Enemy" parent="Enemies" instance=ExtResource( 6 )]
 position = Vector2( 818, 286 )
@@ -152,6 +151,7 @@ margin_left = 34.0
 margin_top = 34.0
 margin_right = 207.0
 margin_bottom = 73.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "0"
 align = 1
 
@@ -162,8 +162,9 @@ margin_left = 8.0
 margin_top = -99.0
 margin_right = 231.0
 margin_bottom = -18.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Hold SPACE:
-drag enemies"
+drag stuff"
 script = ExtResource( 4 )
 
 [node name="Timer" type="Timer" parent="UI/Instructions"]
@@ -224,6 +225,7 @@ align = 1
 [connection signal="timeout" from="Level/CitySpawnPath/CitySpawnTimer" to="." method="_on_CitySpawnTimer_timeout"]
 [connection signal="body_entered" from="Level/Lance/Area2D" to="." method="_on_Lance_body_entered"]
 [connection signal="timeout" from="Level/Lance/EnemySpawnPath/EnemySpawnTimer" to="." method="_on_SpawnTimer_timeout"]
+[connection signal="timeout" from="Level/Lance/EnemySpawnPath/EnemyTimerDifficulty" to="." method="_on_EnemyTimerDifficulty_timeout"]
 [connection signal="lance_triggered" from="Player" to="." method="_on_Player_lance_triggered"]
 [connection signal="player_killed" from="Player" to="." method="_on_Player_player_killed"]
 [connection signal="enemy_killed" from="Enemies/Enemy" to="." method="_on_Enemy_enemy_killed"]

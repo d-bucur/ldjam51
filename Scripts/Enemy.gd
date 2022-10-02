@@ -15,7 +15,7 @@ var tween: SceneTreeTween
 var ready_to_shoot = false
 
 func _ready():
-	yield(get_tree().create_timer(2), "timeout")
+	yield(get_tree().create_timer(1), "timeout")
 	ready_to_shoot = true
 
 func shoot():

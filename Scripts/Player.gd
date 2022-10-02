@@ -25,6 +25,9 @@ func _process(delta):
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
 		move_and_slide(velocity * delta)
+		$Sprite.animation = "walk"
+	else:
+		$Sprite.animation = "idle"
 		
 	if Input.is_action_pressed("drag"):
 		for enemy in enemies_in_movement_area.values():

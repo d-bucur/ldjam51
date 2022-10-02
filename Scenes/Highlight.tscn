@@ -1,9 +1,8 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scripts/Highlight.gd" type="Script" id=1]
-[ext_resource path="res://Assets/crosshair121.png" type="Texture" id=2]
+[ext_resource path="res://Assets/lineart/crosshair.png" type="Texture" id=2]
 
 [node name="Highlight" type="Sprite"]
-self_modulate = Color( 1, 1, 1, 0.345098 )
 texture = ExtResource( 2 )
 script = ExtResource( 1 )

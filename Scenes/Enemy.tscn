@@ -1,16 +1,15 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/Enemy.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Projectile.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Assets/tankBody_dark_outline.png" type="Texture" id=3]
-[ext_resource path="res://Assets/arrowUp.png" type="Texture" id=4]
+[ext_resource path="res://Assets/lineart/tank.png" type="Texture" id=3]
+[ext_resource path="res://Assets/placeholder/arrowUp.png" type="Texture" id=4]
 [ext_resource path="res://Scenes/TNT.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Highlight.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Assets/Audio/laser3.ogg" type="AudioStream" id=7]
-[ext_resource path="res://Assets/tankRed_barrel1_outline.png" type="Texture" id=8]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 15.0949
+radius = 25.0
 height = 7.8102
 
 [node name="Enemy" type="KinematicBody2D" groups=["enemies"]]
@@ -21,33 +20,27 @@ script = ExtResource( 1 )
 projectile_template = ExtResource( 2 )
 powerup_template = ExtResource( 5 )
 projectile_speed = 600
-projectile_offset = 50
+projectile_offset = 75
 powerup_chance = 0.2
 
 [node name="Highlight" parent="." instance=ExtResource( 6 )]
-scale = Vector2( 0.426184, 0.426184 )
+position = Vector2( 6, 0 )
+scale = Vector2( 1.04169, 1.04169 )
 
 [node name="Sprite" type="Sprite" parent="."]
-rotation = -1.5708
-scale = Vector2( 0.364069, 0.364069 )
+position = Vector2( 7.55225, 0 )
 texture = ExtResource( 3 )
 
-[node name="Sprite2" type="Sprite" parent="."]
-position = Vector2( 9, 0 )
-rotation = 1.5708
-scale = Vector2( 0.376205, 0.376205 )
-texture = ExtResource( 8 )
-
 [node name="Indicator" type="Sprite" parent="."]
+visible = false
 self_modulate = Color( 0.623529, 0.160784, 0.160784, 1 )
-position = Vector2( 34, 0 )
+position = Vector2( 47, 0 )
 rotation = 1.5708
 scale = Vector2( 0.332026, 0.332026 )
 texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2( -3, 0 )
+position = Vector2( 3, 0 )
 rotation = 1.5708
 shape = SubResource( 1 )
 

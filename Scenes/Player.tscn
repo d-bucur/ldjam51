@@ -1,25 +1,41 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
-[ext_resource path="res://Assets/playerGrey_stand.png" type="Texture" id=2]
+[ext_resource path="res://Assets/lineart/player.png" type="Texture" id=2]
+[ext_resource path="res://Assets/lineart/player2.png" type="Texture" id=3]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+} ]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 15.0949
-height = 5.80914
+radius = 26.0
+height = 12.0
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 44.0
+radius = 59.0085
 
 [node name="Player" type="KinematicBody2D"]
 collision_layer = 25
 collision_mask = 2
 script = ExtResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 2 )
+[node name="Sprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 3 )
+animation = "idle"
+playing = true
 
 [node name="PlayerCollider" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -2 )
+position = Vector2( 0, 1 )
 shape = SubResource( 1 )
 
 [node name="MovementArea" type="Area2D" parent="."]
@@ -28,6 +44,7 @@ collision_mask = 32
 monitorable = false
 
 [node name="AreaCollider" type="CollisionShape2D" parent="MovementArea"]
+visible = false
 shape = SubResource( 2 )
 
 [connection signal="projectile_hit" from="." to="." method="_on_Player_projectile_hit"]

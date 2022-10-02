@@ -8,14 +8,12 @@
   - mirror: duplicates the shot in new directions
 
 ## juice
-- sounds
-- sprites
-- better indicator when moving enemies
+- music
 
 ## ideas to explore
-- player interaction with trigger?
+- player interaction with trigger
 - projectiles split when time triggered
-- second lance that duplicates stuff?
-- 
+- second lance that duplicates stuff
 - reposition enemies after triggering
-- kill enemies when falling off level??
+- kill enemies when falling off level
+- better indicator when moving enemies

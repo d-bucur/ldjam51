@@ -81,3 +81,7 @@ func _on_Enemy_enemy_killed():
 
 func _on_CitySpawnTimer_timeout():
 	spawn_city()
+
+
+func _on_EnemyTimerDifficulty_timeout():
+	$Level/Lance/EnemySpawnPath/EnemySpawnTimer.wait_time *= 0.75
