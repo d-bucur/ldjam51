@@ -1,8 +1,23 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/City.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Highlight.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/lineart/city.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/SlowmoArea.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/lineart/shield.png" type="Texture" id=5]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "warping",
+"speed": 5.0
+} ]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 35.7143
@@ -18,12 +33,16 @@ script = ExtResource( 1 )
 position = Vector2( 0, 3 )
 scale = Vector2( 1.26636, 1.26636 )
 
-[node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 3 )
+[node name="Sprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 2 )
+animation = "warping"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 2 )
 rotation = 1.5708
 shape = SubResource( 1 )
+
+[node name="SlowmoArea" parent="." instance=ExtResource( 4 )]
+scale = Vector2( 0.886065, 0.886065 )
 
 [connection signal="projectile_hit" from="." to="." method="_on_City_projectile_hit"]

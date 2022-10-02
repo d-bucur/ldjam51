@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://Assets/lineart/player.png" type="Texture" id=2]
 [ext_resource path="res://Assets/lineart/player2.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/SlowmoArea.tscn" type="PackedScene" id=4]
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
@@ -22,7 +23,7 @@ radius = 26.0
 height = 12.0
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 59.0085
+radius = 84.006
 
 [node name="Player" type="KinematicBody2D"]
 collision_layer = 25
@@ -47,6 +48,10 @@ monitorable = false
 visible = false
 shape = SubResource( 2 )
 
+[node name="SlowmoArea" parent="." instance=ExtResource( 4 )]
+
 [connection signal="projectile_hit" from="." to="." method="_on_Player_projectile_hit"]
 [connection signal="body_entered" from="MovementArea" to="." method="_on_MovementArea_body_entered"]
 [connection signal="body_exited" from="MovementArea" to="." method="_on_MovementArea_body_exited"]
+[connection signal="activate_slowmo" from="SlowmoArea" to="." method="_on_SlowmoArea_activate_slowmo"]
+[connection signal="deactivate_slowmo" from="SlowmoArea" to="." method="_on_SlowmoArea_deactivate_slowmo"]

@@ -4,6 +4,7 @@ export(PackedScene) var enemy_template
 export(PackedScene) var city_template
 export(PackedScene) var highlight_death_template
 export var time_to_full_rotation = 10
+export var enemy_spawn_time_factor = 0.8  # the lower this is the harder the game will get
 
 signal game_over
 signal enemy_killed
@@ -84,4 +85,4 @@ func _on_CitySpawnTimer_timeout():
 
 
 func _on_EnemyTimerDifficulty_timeout():
-	$Level/Lance/EnemySpawnPath/EnemySpawnTimer.wait_time *= 0.75
+	$Level/Lance/EnemySpawnPath/EnemySpawnTimer.wait_time *= enemy_spawn_time_factor

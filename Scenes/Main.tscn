@@ -105,7 +105,6 @@ polygon = PoolVector2Array( 0, -512, 91, -508, 245, -455, 387, -345, 478, -198, 
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 479, 713 )
-speed = 20000
 
 [node name="Enemies" type="Node2D" parent="."]
 
