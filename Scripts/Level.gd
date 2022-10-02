@@ -2,6 +2,7 @@ extends Node2D
 
 export(PackedScene) var enemy_template
 export(PackedScene) var city_template
+export(PackedScene) var highlight_death_template
 export var time_to_full_rotation = 10
 
 var rotation_speed
@@ -52,10 +53,16 @@ func _on_Lance_body_entered(body):
 	body.emit_signal("lance_triggered")
 
 
-func _on_Player_player_killed():
+func _on_Player_player_killed(obj):
 	get_tree().paused = true
-	$UI/DeathScreen.show()
 	$UI/DeathScreen/ScoreLabel.text = str(score)
+#	$UI/DeathScreen.show()
+
+	var highlight = highlight_death_template.instance()
+	highlight.position = obj.global_position
+	$Enemies.add_child(highlight)
+	
+	$UI.show_game_over()
 
 
 func _on_Restart_pressed():

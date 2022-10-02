@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 export var speed = 15000
 
-signal player_killed
+signal player_killed(obj)
 signal projectile_hit
 signal lance_triggered
 
@@ -32,8 +32,8 @@ func _process(delta):
 		
 func kill():
 	print("Player killed")
-	emit_signal("player_killed")
-	queue_free()
+	emit_signal("player_killed", self)
+#	queue_free()
 
 
 func _on_Player_projectile_hit():
