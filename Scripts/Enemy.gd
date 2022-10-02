@@ -9,8 +9,6 @@ export var powerup_chance = 1.0
 signal enemy_killed
 signal projectile_hit
 signal lance_triggered
-signal drag_start
-signal drag_end
 
 var player: KinematicBody2D
 var tween: SceneTreeTween
@@ -24,7 +22,7 @@ func shoot():
 	if !ready_to_shoot:
 		return
 		
-	print("Shooting")
+#	print("Shooting")
 	var projectile: Node2D = projectile_template.instance()
 	projectile.rotation = rotation
 	projectile.position = position + Vector2(projectile_offset, 0).rotated(rotation)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Other/UITheme.tres" type="Theme" id=1]
 [ext_resource path="res://Scenes/TNT.tscn" type="PackedScene" id=2]
@@ -6,10 +6,16 @@
 [ext_resource path="res://Scripts/TimedHide.gd" type="Script" id=4]
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=5]
 [ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/City.tscn" type="PackedScene" id=7]
 
 [sub_resource type="QuadMesh" id=3]
 
 [sub_resource type="SphereMesh" id=4]
+
+[sub_resource type="Curve2D" id=10]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 212, 141, 0, 0, 0, 0, 509, 20, 0, 0, 0, 0, 832, 165, 0, 0, 0, 0, 994, 493, 0, 0, 0, 0, 843, 828, 0, 0, 0, 0, 533, 996, 0, 0, 0, 0, 212, 865, 0, 0, 0, 0, 39, 529, 0, 0, 0, 0, 212, 141 )
+}
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 5, 256 )
@@ -28,6 +34,7 @@ shortcut = SubResource( 8 )
 [node name="Main" type="Node2D"]
 script = ExtResource( 5 )
 enemy_template = ExtResource( 6 )
+city_template = ExtResource( 7 )
 
 [node name="Level" type="Node2D" parent="."]
 
@@ -42,6 +49,17 @@ self_modulate = Color( 0.917647, 0.937255, 0.847059, 1 )
 position = Vector2( 512, 512 )
 scale = Vector2( 512, 512 )
 mesh = SubResource( 4 )
+
+[node name="CitySpawnPath" type="Path2D" parent="Level"]
+curve = SubResource( 10 )
+
+[node name="CitySpawnTimer" type="Timer" parent="Level/CitySpawnPath"]
+wait_time = 10.0
+autostart = true
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Level/CitySpawnPath"]
+position = Vector2( 212, 141 )
+rotation = -0.386871
 
 [node name="Lance" type="Node2D" parent="Level"]
 position = Vector2( 512, 512 )
@@ -61,16 +79,16 @@ collision_mask = 8
 position = Vector2( 0, -256 )
 shape = SubResource( 2 )
 
-[node name="SpawnPath" type="Path2D" parent="Level/Lance"]
+[node name="EnemySpawnPath" type="Path2D" parent="Level/Lance"]
 curve = SubResource( 5 )
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Level/Lance/SpawnPath"]
-position = Vector2( -15, -486 )
-rotation = 1.57546
-
-[node name="SpawnTimer" type="Timer" parent="Level"]
+[node name="EnemySpawnTimer" type="Timer" parent="Level/Lance/EnemySpawnPath"]
 wait_time = 4.0
 autostart = true
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Level/Lance/EnemySpawnPath"]
+position = Vector2( -15, -486 )
+rotation = 1.57546
 
 [node name="ClockBorder" type="StaticBody2D" parent="Level"]
 position = Vector2( 512, 512 )
@@ -85,6 +103,10 @@ polygon = PoolVector2Array( 0, -512, 91, -508, 245, -455, 387, -345, 478, -198, 
 position = Vector2( 479, 713 )
 
 [node name="Enemies" type="Node2D" parent="."]
+
+[node name="City" parent="Enemies" instance=ExtResource( 7 )]
+position = Vector2( 329, 642 )
+scale = Vector2( 3.57604, 3.57604 )
 
 [node name="Enemy" parent="Enemies" instance=ExtResource( 6 )]
 position = Vector2( 818, 286 )
@@ -186,8 +208,9 @@ margin_bottom = 5.0
 text = "0"
 align = 1
 
+[connection signal="timeout" from="Level/CitySpawnPath/CitySpawnTimer" to="." method="_on_CitySpawnTimer_timeout"]
 [connection signal="body_entered" from="Level/Lance/Area2D" to="." method="_on_Lance_body_entered"]
-[connection signal="timeout" from="Level/SpawnTimer" to="." method="_on_SpawnTimer_timeout"]
+[connection signal="timeout" from="Level/Lance/EnemySpawnPath/EnemySpawnTimer" to="." method="_on_SpawnTimer_timeout"]
 [connection signal="lance_triggered" from="Player" to="." method="_on_Player_lance_triggered"]
 [connection signal="player_killed" from="Player" to="." method="_on_Player_player_killed"]
 [connection signal="enemy_killed" from="Enemies/Enemy" to="." method="_on_Enemy_enemy_killed"]

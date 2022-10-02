@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Highlight.gd" type="Script" id=1]
+[ext_resource path="res://Assets/crossair_whiteOutline.png" type="Texture" id=2]
+
+[node name="Highlight" type="Sprite"]
+visible = false
+self_modulate = Color( 1, 1, 1, 0.345098 )
+scale = Vector2( 1.98711, 1.98711 )
+texture = ExtResource( 2 )
+script = ExtResource( 1 )
+
+[connection signal="drag_end" from="." to="." method="hide"]
+[connection signal="drag_start" from="." to="." method="show"]

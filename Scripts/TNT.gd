@@ -1,8 +1,6 @@
 extends KinematicBody2D
 
 signal projectile_hit
-signal drag_start
-signal drag_end
 
 export(PackedScene) var explosion_template
 export var time_to_activate = 1

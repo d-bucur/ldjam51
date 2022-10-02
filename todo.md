@@ -1,9 +1,10 @@
 ## content
 - different enemy types
   - charger. how is it as strong as shooter?
+  - shooter. projectile but always follows you
+  - lancer. static but firest hitscan laser
 - powerup types:
   - mirror: duplicates the shot in new directions
-- add static structures to protect
 - reposition enemies after triggering
 - kill enemies when falling off level??
 

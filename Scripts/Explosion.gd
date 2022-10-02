@@ -6,5 +6,6 @@ func _on_Timer_timeout():
 
 
 func _on_Explosion_body_entered(body):
-	print("Explosion hit something")
+#	print("Explosion hit something")
 	body.emit_signal("projectile_hit")
+	get_signal_list()

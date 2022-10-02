@@ -1,6 +1,7 @@
 extends Node2D
 
 export(PackedScene) var enemy_template
+export(PackedScene) var city_template
 export var time_to_full_rotation = 10
 
 var rotation_speed
@@ -19,15 +20,24 @@ func _process(delta):
 func spawn_enemy():
 #	print_debug("Spawning new enemy")
 	var enemy = enemy_template.instance()
-	var spawn_location = $Level/Lance/SpawnPath/PathFollow2D
-	
+	var spawn_location = $Level/Lance/EnemySpawnPath/PathFollow2D
 	spawn_location.offset = randi()
 	enemy.position = spawn_location.global_position
+	$Enemies.add_child(enemy)
+	
+	enemy.connect("enemy_killed", $".", "_on_Enemy_enemy_killed")
+	
 	if ($Player):
 		enemy.look_at($Player.position)
 		enemy.set_player($Player)
-	enemy.connect("enemy_killed", $".", "_on_Enemy_enemy_killed")
-	$Enemies.add_child(enemy)
+	
+func spawn_city():
+	var city = city_template.instance()
+	var spawn_location = $Level/CitySpawnPath/PathFollow2D
+	spawn_location.offset = randi()
+	city.position = spawn_location.global_position
+	city.connect("player_killed", self, "_on_Player_player_killed")
+	$Enemies.add_child(city)
 
 
 func _on_SpawnTimer_timeout():
@@ -54,3 +64,7 @@ func _on_Restart_pressed():
 func _on_Enemy_enemy_killed():
 	score += 1
 	$UI/Score.text = str(score)
+
+
+func _on_CitySpawnTimer_timeout():
+	spawn_city()
