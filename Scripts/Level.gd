@@ -5,6 +5,9 @@ export(PackedScene) var city_template
 export(PackedScene) var highlight_death_template
 export var time_to_full_rotation = 10
 
+signal game_over
+signal enemy_killed
+
 var rotation_speed
 var score = 0
 
@@ -56,13 +59,13 @@ func _on_Lance_body_entered(body):
 func _on_Player_player_killed(obj):
 	get_tree().paused = true
 	$UI/DeathScreen/ScoreLabel.text = str(score)
-#	$UI/DeathScreen.show()
 
 	var highlight = highlight_death_template.instance()
 	highlight.position = obj.global_position
 	$Enemies.add_child(highlight)
 	
 	$UI.show_game_over()
+	emit_signal("game_over")
 
 
 func _on_Restart_pressed():
@@ -73,6 +76,7 @@ func _on_Restart_pressed():
 func _on_Enemy_enemy_killed():
 	score += 1
 	$UI/Score.text = str(score)
+	emit_signal("enemy_killed")
 
 
 func _on_CitySpawnTimer_timeout():

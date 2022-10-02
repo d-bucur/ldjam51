@@ -1,11 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scripts/Enemy.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Projectile.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Assets/enemySpikey_1.png" type="Texture" id=3]
+[ext_resource path="res://Assets/tankBody_dark_outline.png" type="Texture" id=3]
 [ext_resource path="res://Assets/arrowUp.png" type="Texture" id=4]
 [ext_resource path="res://Scenes/TNT.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Highlight.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/Audio/laser3.ogg" type="AudioStream" id=7]
+[ext_resource path="res://Assets/tankRed_barrel1_outline.png" type="Texture" id=8]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 15.0949
@@ -23,12 +25,18 @@ projectile_offset = 50
 powerup_chance = 0.2
 
 [node name="Highlight" parent="." instance=ExtResource( 6 )]
-position = Vector2( -6, 0 )
-scale = Vector2( 1.79119, 1.79119 )
+scale = Vector2( 0.426184, 0.426184 )
 
 [node name="Sprite" type="Sprite" parent="."]
-rotation = 1.5708
+rotation = -1.5708
+scale = Vector2( 0.364069, 0.364069 )
 texture = ExtResource( 3 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 9, 0 )
+rotation = 1.5708
+scale = Vector2( 0.376205, 0.376205 )
+texture = ExtResource( 8 )
 
 [node name="Indicator" type="Sprite" parent="."]
 self_modulate = Color( 0.623529, 0.160784, 0.160784, 1 )
@@ -38,9 +46,15 @@ scale = Vector2( 0.332026, 0.332026 )
 texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( -3, 0 )
 rotation = 1.5708
 shape = SubResource( 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -22.761
+autoplay = true
 
 [connection signal="lance_triggered" from="." to="." method="_on_Enemy_lance_triggered"]
 [connection signal="projectile_hit" from="." to="." method="_on_Enemy_projectile_hit"]

@@ -30,16 +30,20 @@ func shoot():
 	projectile.linear_velocity = velocity.rotated(rotation)
 	get_parent().add_child(projectile)
 	
+	rotate_to_player_tween()
+	
+func rotate_to_player_tween():
 	if is_instance_valid(player):
 		tween = get_tree().create_tween()
 		var dest_rotation = player.position.angle_to_point(position)
 		
-		# TODO not using fastest rotation, bug with this
+		# TODO BUG: not using fastest rotation
 		if dest_rotation - dest_rotation >= PI/2:
 			dest_rotation -= PI/2
 		tween.tween_property($".", "rotation", dest_rotation, 2)
 	else:
 		print("Could not find player")
+	
 	
 func kill():
 	emit_signal("enemy_killed")

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Assets/chipWhite_border.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Projectile.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Audio/laserSmall_003.ogg" type="AudioStream" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -23,6 +24,10 @@ rotation = -0.00794696
 shape = SubResource( 1 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
 
 [connection signal="body_entered" from="." to="." method="_on_Projectile_body_entered"]
 [connection signal="body_shape_entered" from="." to="." method="_on_Projectile_body_shape_entered"]
