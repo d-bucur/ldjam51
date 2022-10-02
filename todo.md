@@ -8,7 +8,7 @@
   - mirror: duplicates the shot in new directions
 
 ## juice
-- music
+- more animations
 
 ## ideas to explore
 - player interaction with trigger

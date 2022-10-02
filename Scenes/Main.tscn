@@ -1,7 +1,7 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Other/UITheme.tres" type="Theme" id=1]
-[ext_resource path="res://Scenes/TNT.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Audio/explosion4.ogg" type="AudioStream" id=2]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scripts/TimedHide.gd" type="Script" id=4]
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=5]
@@ -9,7 +9,6 @@
 [ext_resource path="res://Scenes/City.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scripts/UI.gd" type="Script" id=8]
 [ext_resource path="res://Scenes/HighlightDeath.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Assets/Audio/creature1.ogg" type="AudioStream" id=10]
 [ext_resource path="res://Assets/Audio/lose5.ogg" type="AudioStream" id=11]
 [ext_resource path="res://Assets/lineart/clock.png" type="Texture" id=12]
 [ext_resource path="res://Assets/lineart/lance.png" type="Texture" id=13]
@@ -96,7 +95,9 @@ rotation = 1.57546
 
 [node name="ClockBorder" type="StaticBody2D" parent="Level"]
 position = Vector2( 512, 512 )
+scale = Vector2( 1, 1.00211 )
 collision_layer = 4
+collision_mask = 33
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Level/ClockBorder"]
 visible = false
@@ -108,28 +109,6 @@ position = Vector2( 479, 713 )
 
 [node name="Enemies" type="Node2D" parent="."]
 
-[node name="City" parent="Enemies" instance=ExtResource( 7 )]
-position = Vector2( 329, 642 )
-
-[node name="Enemy" parent="Enemies" instance=ExtResource( 6 )]
-position = Vector2( 818, 286 )
-rotation = 2.32981
-
-[node name="TNT" parent="Enemies" instance=ExtResource( 2 )]
-position = Vector2( 714, 663 )
-
-[node name="Enemy2" parent="Enemies" instance=ExtResource( 6 )]
-position = Vector2( 208, 377 )
-rotation = 0.823215
-
-[node name="Enemy3" parent="Enemies" instance=ExtResource( 6 )]
-position = Vector2( 666, 613 )
-rotation = -2.65604
-
-[node name="Enemy4" parent="Enemies" instance=ExtResource( 6 )]
-position = Vector2( 792, 739 )
-rotation = -2.3857
-
 [node name="UI" type="Control" parent="."]
 pause_mode = 2
 anchor_right = 1.0
@@ -140,7 +119,8 @@ theme = ExtResource( 1 )
 script = ExtResource( 8 )
 
 [node name="EnemyDestroyedSound" type="AudioStreamPlayer" parent="UI"]
-stream = ExtResource( 10 )
+stream = ExtResource( 2 )
+volume_db = -12.235
 
 [node name="GameOverSound" type="AudioStreamPlayer" parent="UI"]
 stream = ExtResource( 11 )
@@ -227,8 +207,5 @@ align = 1
 [connection signal="timeout" from="Level/Lance/EnemySpawnPath/EnemyTimerDifficulty" to="." method="_on_EnemyTimerDifficulty_timeout"]
 [connection signal="lance_triggered" from="Player" to="." method="_on_Player_lance_triggered"]
 [connection signal="player_killed" from="Player" to="." method="_on_Player_player_killed"]
-[connection signal="enemy_killed" from="Enemies/Enemy" to="." method="_on_Enemy_enemy_killed"]
-[connection signal="enemy_killed" from="Enemies/Enemy2" to="." method="_on_Enemy_enemy_killed"]
-[connection signal="enemy_killed" from="Enemies/Enemy3" to="." method="_on_Enemy_enemy_killed"]
 [connection signal="timeout" from="UI/Instructions/Timer" to="UI/Instructions" method="_on_Timer_timeout"]
 [connection signal="pressed" from="UI/DeathScreen/Button" to="." method="_on_Restart_pressed"]

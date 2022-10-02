@@ -16,6 +16,7 @@ func _ready():
 	rotation_speed = 2 * PI / time_to_full_rotation
 	randomize()
 	$UI/DeathScreen.hide()
+	spawn_enemy()
 
 
 func _process(delta):

@@ -1,7 +1,8 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Assets/Audio/House In a Forest Loop.ogg" type="AudioStream" id=1]
+[ext_resource path="res://Assets/Audio/1161836_Nightfall.mp3" type="AudioStream" id=1]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+pause_mode = 2
 stream = ExtResource( 1 )
 autoplay = true
