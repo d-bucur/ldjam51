@@ -52,18 +52,20 @@ func _on_Player_projectile_hit():
 func _on_MovementArea_body_entered(body):
 	enemies_in_movement_area[body.get_instance_id()] = body
 	body.emit_signal("drag_start")
+	body.emit_signal("guide_show")
 
 
 func _on_MovementArea_body_exited(body):
 	enemies_in_movement_area.erase(body.get_instance_id())
 	body.emit_signal("drag_end")
+	body.emit_signal("guide_hide")
 
 
 func _on_SlowmoArea_activate_slowmo(slowmo_scale):
-	print("Slowing down %f" % slowmo_scale)
-	print("Speed: %f" % speed_actual)
-	speed_actual *= 5
-	print("Speed: %f" % speed_actual)
+	print_debug("Slowing down %f" % slowmo_scale)
+#	print("Speed: %f" % speed_actual)
+	speed_actual *= 2
+#	print("Speed: %f" % speed_actual)
 
 
 func _on_SlowmoArea_deactivate_slowmo():

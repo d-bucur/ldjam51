@@ -25,7 +25,7 @@ height = 14.5715
 
 [node name="City" type="RigidBody2D" groups=["enemies"]]
 position = Vector2( 662, 400 )
-collision_layer = 48
+collision_layer = 56
 collision_mask = 33
 mode = 2
 script = ExtResource( 1 )
@@ -46,4 +46,5 @@ shape = SubResource( 1 )
 [node name="SlowmoArea" parent="." instance=ExtResource( 4 )]
 scale = Vector2( 0.886065, 0.886065 )
 
+[connection signal="lance_triggered" from="." to="." method="_on_City_lance_triggered"]
 [connection signal="projectile_hit" from="." to="." method="_on_City_projectile_hit"]

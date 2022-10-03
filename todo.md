@@ -5,13 +5,13 @@
   - shooter. projectile but always follows you
   - lancer. static but firest hitscan laser
 - powerup types:
+- - **shield**: blocks a few shots before breaking
   - mirror: duplicates the shot in new directions
 
 ## juice
+- **bug when enemies rotate**
 - more animations
   - particles on cannon death
-  - muzzle when shooting
-  - animation when shooting
   - explosion animation
 
 ## ideas to explore
@@ -20,4 +20,6 @@
 - second lance that duplicates stuff
 - reposition enemies after triggering
 - kill enemies when falling off level
-- better indicator when moving enemies
+
+## other
+- config github actions to publish to itch.io

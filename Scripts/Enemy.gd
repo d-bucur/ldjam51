@@ -5,22 +5,28 @@ export(PackedScene) var powerup_template
 export var projectile_speed = 15000
 export var projectile_offset = 100
 export var powerup_chance = 1.0
+export var reload_time = 1
 
-signal enemy_killed
-signal projectile_hit
+signal enemy_killed(pos)
+signal projectile_hit  # TODO should be damaged, as diffrent types of dmg can trigger it
 signal lance_triggered
+signal guide_show   # could be extracted into separate node like Highlight
+signal guide_hide
 
 var player: PhysicsBody2D
-var tween: SceneTreeTween
 var ready_to_shoot = false
+var dest_rotation
 
 func _ready():
-	yield(get_tree().create_timer(1), "timeout")
+	$AimGuide.hide()
+	yield(get_tree().create_timer(reload_time), "timeout")
 	ready_to_shoot = true
 
 func shoot():
 	if !ready_to_shoot:
 		return
+		
+	$Sprite.play("shooting")
 		
 #	print("Shooting")
 	var projectile: Node2D = projectile_template.instance()
@@ -28,25 +34,35 @@ func shoot():
 	projectile.position = position + Vector2(projectile_offset, 0).rotated(rotation)
 	var velocity = Vector2(projectile_speed, 0)
 	projectile.linear_velocity = velocity.rotated(rotation)
-	get_parent().add_child(projectile)
+	get_parent().call_deferred("add_child", projectile)
 	
 	rotate_to_player_tween()
 	
+	ready_to_shoot = false
+	yield(get_tree().create_timer(reload_time), "timeout")
+	ready_to_shoot = true
+	
 func rotate_to_player_tween():
 	if is_instance_valid(player):
-		tween = get_tree().create_tween()
-		var dest_rotation = player.position.angle_to_point(position)
+		dest_rotation = player.position.angle_to_point(position)
 		
 		# TODO BUG: not using fastest rotation
 		if dest_rotation - dest_rotation >= PI/2:
 			dest_rotation -= PI/2
-		tween.tween_property($".", "rotation", dest_rotation, 2)
+		
+		var tween = get_tree().create_tween()
+		tween.tween_property($".", "rotation", dest_rotation, 1)
 	else:
 		print_debug("Could not find player")
+		
+func _integrate_forces(state):
+	if dest_rotation:
+		# always override the internal physics engine rotation
+		state.transform = Transform2D(dest_rotation, position)
 	
 	
 func kill():
-	emit_signal("enemy_killed")
+	emit_signal("enemy_killed", global_position)
 	queue_free()
 	
 	if randf() <= powerup_chance:
@@ -63,3 +79,14 @@ func set_player(player_obj):
 
 func _on_Enemy_lance_triggered():
 	shoot()
+	
+func _on_Sprite_animation_finished():
+	$Sprite.animation = "default"
+
+
+func _on_Enemy_guide_show():
+	$AimGuide.show()
+
+
+func _on_Enemy_guide_hide():
+	$AimGuide.hide()

@@ -10,7 +10,7 @@ extents = Vector2( 25.0001, 20.4999 )
 
 [node name="TNT" type="RigidBody2D" groups=["enemies"]]
 position = Vector2( 662, 400 )
-collision_layer = 48
+collision_layer = 56
 collision_mask = 33
 mode = 2
 script = ExtResource( 2 )
@@ -27,4 +27,5 @@ position = Vector2( 0.500061, 5 )
 rotation = 1.5708
 shape = SubResource( 1 )
 
+[connection signal="lance_triggered" from="." to="." method="_on_TNT_lance_triggered"]
 [connection signal="projectile_hit" from="." to="." method="_on_TNT_projectile_hit"]

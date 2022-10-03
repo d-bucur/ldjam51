@@ -5,7 +5,6 @@
 [ext_resource path="res://Scenes/SlowmoArea.tscn" type="PackedScene" id=4]
 
 [sub_resource type="StreamTexture" id=4]
-flags = 4
 load_path = "res://.import/player2.png-2e5d133354389bd6621ef72015e4efed.stex"
 
 [sub_resource type="SpriteFrames" id=3]
@@ -34,7 +33,6 @@ collision_mask = 2
 mode = 2
 gravity_scale = 0.0
 script = ExtResource( 1 )
-speed = 5000
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 3 )
@@ -55,6 +53,7 @@ visible = false
 shape = SubResource( 2 )
 
 [node name="SlowmoArea" parent="." instance=ExtResource( 4 )]
+slowmo_scale = 0.2
 
 [connection signal="projectile_hit" from="." to="." method="_on_Player_projectile_hit"]
 [connection signal="body_entered" from="MovementArea" to="." method="_on_MovementArea_body_entered"]

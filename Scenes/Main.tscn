@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Other/UITheme.tres" type="Theme" id=1]
 [ext_resource path="res://Assets/Audio/explosion4.ogg" type="AudioStream" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Scenes/City.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scripts/UI.gd" type="Script" id=8]
 [ext_resource path="res://Scenes/HighlightDeath.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/ScoreUpTemplate.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Assets/Audio/lose5.ogg" type="AudioStream" id=11]
 [ext_resource path="res://Assets/lineart/clock.png" type="Texture" id=12]
 [ext_resource path="res://Assets/lineart/lance.png" type="Texture" id=13]
@@ -39,6 +40,8 @@ script = ExtResource( 5 )
 enemy_template = ExtResource( 6 )
 city_template = ExtResource( 7 )
 highlight_death_template = ExtResource( 9 )
+score_up_template = ExtResource( 10 )
+enemy_spawn_time_factor = 0.92
 
 [node name="Level" type="Node2D" parent="."]
 
@@ -82,7 +85,7 @@ shape = SubResource( 2 )
 curve = SubResource( 5 )
 
 [node name="EnemySpawnTimer" type="Timer" parent="Level/Lance/EnemySpawnPath"]
-wait_time = 4.0
+wait_time = 5.0
 autostart = true
 
 [node name="EnemyTimerDifficulty" type="Timer" parent="Level/Lance/EnemySpawnPath"]
@@ -132,6 +135,21 @@ margin_right = 207.0
 margin_bottom = 73.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "0"
+align = 1
+
+[node name="PausedLabel" type="Label" parent="UI"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -499.0
+margin_top = 410.0
+margin_right = -315.0
+margin_bottom = 503.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Press ESC
+to resume"
 align = 1
 
 [node name="Instructions" type="Label" parent="UI"]
@@ -199,6 +217,7 @@ margin_bottom = 5.0
 text = "0"
 align = 1
 
+[connection signal="add_score" from="." to="." method="_on_Main_add_score"]
 [connection signal="enemy_killed" from="." to="UI/EnemyDestroyedSound" method="play"]
 [connection signal="game_over" from="." to="UI/GameOverSound" method="play"]
 [connection signal="timeout" from="Level/CitySpawnPath/CitySpawnTimer" to="." method="_on_CitySpawnTimer_timeout"]

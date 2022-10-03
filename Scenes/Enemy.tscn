@@ -2,15 +2,14 @@
 
 [ext_resource path="res://Scripts/Enemy.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Projectile.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Assets/lineart/tank.png" type="Texture" id=3]
-[ext_resource path="res://Assets/placeholder/arrowUp.png" type="Texture" id=4]
+[ext_resource path="res://Assets/lineart/aimguide.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/TNT.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Highlight.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Assets/Audio/laser3.ogg" type="AudioStream" id=7]
+[ext_resource path="res://Other/new_spriteframes.tres" type="SpriteFrames" id=8]
 
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 25.0
-height = 7.8102
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 22.0001, 31.9999 )
 
 [node name="Enemy" type="RigidBody2D" groups=["enemies"]]
 position = Vector2( 690, 379 )
@@ -26,23 +25,13 @@ projectile_offset = 75
 powerup_chance = 0.2
 
 [node name="Highlight" parent="." instance=ExtResource( 6 )]
-position = Vector2( 6, 0 )
-scale = Vector2( 1.04169, 1.04169 )
+scale = Vector2( 1.11628, 1.11628 )
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 7.55225, 0 )
-texture = ExtResource( 3 )
-
-[node name="Indicator" type="Sprite" parent="."]
-visible = false
-self_modulate = Color( 0.623529, 0.160784, 0.160784, 1 )
-position = Vector2( 47, 0 )
-rotation = 1.5708
-scale = Vector2( 0.332026, 0.332026 )
-texture = ExtResource( 4 )
+[node name="Sprite" type="AnimatedSprite" parent="."]
+position = Vector2( 11, 0 )
+frames = ExtResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 3, 0 )
 rotation = 1.5708
 shape = SubResource( 1 )
 
@@ -51,5 +40,13 @@ stream = ExtResource( 7 )
 volume_db = -22.761
 autoplay = true
 
+[node name="AimGuide" type="Sprite" parent="."]
+position = Vector2( 824, 0 )
+rotation = 1.5708
+texture = ExtResource( 3 )
+
+[connection signal="guide_hide" from="." to="." method="_on_Enemy_guide_hide"]
+[connection signal="guide_show" from="." to="." method="_on_Enemy_guide_show"]
 [connection signal="lance_triggered" from="." to="." method="_on_Enemy_lance_triggered"]
 [connection signal="projectile_hit" from="." to="." method="_on_Enemy_projectile_hit"]
+[connection signal="animation_finished" from="Sprite" to="." method="_on_Sprite_animation_finished"]

@@ -3,11 +3,13 @@ extends Node2D
 export(PackedScene) var enemy_template
 export(PackedScene) var city_template
 export(PackedScene) var highlight_death_template
+export(PackedScene) var score_up_template
 export var time_to_full_rotation = 10
-export var enemy_spawn_time_factor = 0.8  # the lower this is the harder the game will get
+export var enemy_spawn_time_factor = 0.85  # the lower this is the harder the game will get
 
 signal game_over
-signal enemy_killed
+signal enemy_killed(pos)
+signal add_score(pos)
 
 var rotation_speed
 var score = 0
@@ -18,6 +20,7 @@ func _ready():
 	rotation_speed = 2 * PI / time_to_full_rotation
 	randomize()
 	$UI/DeathScreen.hide()
+	spawn_enemy()
 	spawn_enemy()
 
 
@@ -31,7 +34,7 @@ func spawn_enemy():
 	var spawn_location = $Level/Lance/EnemySpawnPath/PathFollow2D
 	spawn_location.offset = randi()
 	enemy.position = spawn_location.global_position
-	$Enemies.add_child(enemy)
+	$Enemies.call_deferred("add_child", enemy)
 	
 	enemy.connect("enemy_killed", $".", "_on_Enemy_enemy_killed")
 	
@@ -45,7 +48,7 @@ func spawn_city():
 	spawn_location.offset = randi()
 	city.position = spawn_location.global_position
 	city.connect("player_killed", self, "_on_Player_player_killed")
-	$Enemies.add_child(city)
+	$Enemies.call_deferred("add_child", city)
 
 
 func _on_SpawnTimer_timeout():
@@ -77,9 +80,17 @@ func _on_Restart_pressed():
 	get_tree().reload_current_scene()
 
 
-func _on_Enemy_enemy_killed():
+func _add_score(pos):
 	score += 1
 	$UI/Score.text = str(score)
+	# TODO should be inside UI
+	var indicator = score_up_template.instance()
+	indicator.rect_position = pos
+	$UI.add_child(indicator)
+	
+
+func _on_Enemy_enemy_killed(pos):
+	_add_score(pos)
 	emit_signal("enemy_killed")
 
 
@@ -89,3 +100,7 @@ func _on_CitySpawnTimer_timeout():
 
 func _on_EnemyTimerDifficulty_timeout():
 	$Level/Lance/EnemySpawnPath/EnemySpawnTimer.wait_time *= enemy_spawn_time_factor
+
+
+func _on_Main_add_score(pos):
+	_add_score(pos)
