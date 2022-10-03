@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1024"
+   height="1024"
+   viewBox="0 0 270.93333 270.93334"
+   version="1.1"
+   id="svg5"
+   inkscape:export-filename="C:\Users\sirdo\Projects\Godot\ldjam51\Assets\lineart\clock.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04, custom)"
+   sodipodi:docname="vector.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="true"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:snap-intersection-paths="true"
+     inkscape:object-paths="false"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-object-midpoints="true"
+     units="px"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:zoom="3.6203867"
+     inkscape:cx="425.64514"
+     inkscape:cy="374.95995"
+     inkscape:window-width="2048"
+     inkscape:window-height="1082"
+     inkscape:window-x="388"
+     inkscape:window-y="-1158"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer2"
+     inkscape:snap-global="true" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="bg"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:none">
+    <circle
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.64583;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path6945"
+       cx="135.46667"
+       cy="135.46667"
+       r="134.15656"
+       inkscape:export-filename="C:\Users\sirdo\Projects\Godot\ldjam51\Assets\lineart\clock.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <g
+       id="g12092"
+       style="stroke-width:2.64583;stroke-miterlimit:4;stroke-dasharray:none">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:2.64583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 58.377347,29.362316 135.46667,135.46667 V 4.3144876"
+         id="path11463" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:2.64583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 212.55599,29.362319 135.46667,135.46667 260.19981,94.938411"
+         id="path11455" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:2.64583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 260.1998,175.99491 135.46667,135.46667 212.55598,241.571"
+         id="path11457" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:2.64583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 135.46666,266.61885 1e-5,-131.15218 L 58.37734,241.571"
+         id="path11459" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:2.64583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 10.733523,175.99491 135.46666,135.46666 10.733526,94.938406"
+         id="path11461" />
+    </g>
+    <circle
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.32292;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="path11671"
+       cx="135.46666"
+       cy="135.46666"
+       r="122.34152" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="lance"
+     style="display:none">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:5.06485;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 135.46666,135.46666 1e-5,-116.813566"
+       id="path7204"
+       inkscape:export-filename="C:\Users\sirdo\Projects\Godot\ldjam51\Assets\lineart\lance.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.32292;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.32292, 15.875;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 285.86574,303.3944 10e-6,-395.948988"
+       id="path19949"
+       inkscape:export-filename="C:\Users\sirdo\Projects\Godot\ldjam51\Assets\lineart\aimguide.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       sodipodi:nodetypes="cc" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="characters"
+     style="display:inline">
+    <g
+       id="g10878"
+       transform="translate(-35.938565,78.068594)"
+       inkscape:export-filename="C:\Users\sirdo\Projects\Godot\ldjam51\Assets\lineart\player.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.64583;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+      <rect
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.64583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="rect9010"
+         width="6.2700458"
+         height="10.780837"
+         x="179.16893"
+         y="87.109161" />
+      <path
+         sodipodi:type="star"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:10;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="path9501"
+         inkscape:flatsided="true"
+         sodipodi:sides="6"
+         sodipodi:cx="601.5968"
+         sodipodi:cy="298.20532"
+         sodipodi:r1="24.928911"
+         sodipodi:r2="14.340543"
+         sodipodi:arg1="1.5707963"
+         sodipodi:arg2="2.0943951"
+         inkscape:rounded="0.093075643"
+         inkscape:randomized="0"
+         d="m 601.5968,323.13423 c -2.32027,0 -20.42893,-10.45503 -21.58907,-12.46445 -1.16014,-2.00942 -1.16014,-22.9195 0,-24.92891 1.16014,-2.00942 19.2688,-12.46446 21.58907,-12.46446 2.32028,0 20.42893,10.45504 21.58907,12.46446 1.16014,2.00941 1.16014,22.91949 0,24.92891 -1.16013,2.00941 -19.26879,12.46445 -21.58907,12.46445 z"
+         transform="matrix(0.26458333,0,0,0.26458333,23.13147,8.9094494)"
+         inkscape:transform-center-x="2.9844841e-06"
+         inkscape:transform-center-y="0.44477572" />
+    </g>
+    <g
+       id="g10874"
+       transform="rotate(-90,177.53517,89.024236)"
+       inkscape:export-filename="C:\Users\sirdo\Projects\Godot\ldjam51\Assets\lineart\tank.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.64583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="rect10325"
+         width="10.843653"
+         height="10.843653"
+         x="170.25706"
+         y="46.600861"
+         ry="3.4149857" />
+      <rect
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.64583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="rect10465"
+         width="3.5785594"
+         height="11.004948"
+         x="173.8896"
+         y="50.789207"
+         ry="1.1915109" />
+    </g>
+    <g
+       id="g14117"
+       transform="translate(16.089626,27.689123)"
+       inkscape:export-filename="C:\Users\sirdo\Projects\Godot\ldjam51\Assets\lineart\bomb.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1.32292;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 200.06087,58.324329 V 54.302485"
+         id="path13749" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1.32292;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 203.47524,58.324329 V 54.302485"
+         id="path13873" />
+      <rect
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.64583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="rect8711"
+         width="8.5701666"
+         height="9.149251"
+         x="197.45959"
+         y="59.196663"
+         ry="1.7283891" />
+    </g>
+    <g
+       id="g16992"
+       transform="matrix(0.80523911,0,0,0.80523911,62.157659,26.808472)"
+       inkscape:export-filename="C:\Users\sirdo\Projects\Godot\ldjam51\Assets\lineart\city.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <g
+         id="g19238">
+        <rect
+           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:3.28577;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+           id="rect16500"
+           width="6.1739259"
+           height="6.6069474"
+           x="220.76186"
+           y="41.317173"
+           ry="0.92480606" />
+        <rect
+           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:3.28577;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+           id="rect16498"
+           width="11.509375"
+           height="11.509375"
+           x="219.73645"
+           y="47.228123"
+           ry="1.728388" />
+      </g>
+      <path
+         id="path16608"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:3.28577;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         d="m 225.16145,38.134107 a 12.628485,12.15184 0 0 0 -12.62869,12.151534 12.628485,12.15184 0 0 0 3.54862,8.438001 h 18.15961 a 12.628485,12.15184 0 0 0 3.54862,-8.438001 12.628485,12.15184 0 0 0 -12.62816,-12.151534 z"
+         inkscape:export-filename="C:\Users\sirdo\Projects\Godot\ldjam51\Assets\lineart\shield.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+    </g>
+    <circle
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.32291996;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:10.58335964,10.58335964;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="path17036"
+       cx="194.07785"
+       cy="111.36285"
+       r="11.06777"
+       inkscape:export-filename="C:\Users\sirdo\Projects\Godot\ldjam51\Assets\lineart\crosshair.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       id="path17162"
+       style="opacity:1;fill:#ffffff;stroke:#000000;stroke-width:2.64583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke fill markers"
+       inkscape:transform-center-x="-1.0171308"
+       d="m 219.63569,108.94792 -6.10278,2.0702 c 0.7518,-1.44864 0.65772,-2.8202 0,-4.14041 z"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="C:\Users\sirdo\Projects\Godot\ldjam51\Assets\lineart\bullet.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <g
+       id="g17955"
+       transform="matrix(1.9846573,0,0,1.9846573,-212.45073,-120.90984)"
+       style="stroke-width:0.66657184;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:export-filename="C:\Users\sirdo\Projects\Godot\ldjam51\Assets\lineart\crosshair2.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <circle
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.66657184;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+         id="circle17545"
+         cx="226.84071"
+         cy="135.96083"
+         r="11.06777"
+         inkscape:export-filename="C:\Users\sirdo\Projects\Godot\ldjam51\Assets\lineart\crosshair.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <path
+         id="path17660"
+         style="fill:none;stroke:#000000;stroke-width:0.66657184;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 235.12856,135.96083 h 6.09211" />
+      <path
+         id="path17785"
+         style="fill:none;stroke:#000000;stroke-width:0.66657184;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 212.46074,135.96083 h 6.0916" />
+      <path
+         id="path17742"
+         style="fill:none;stroke:#000000;stroke-width:0.66657184;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 226.8407,144.24919 v 6.09161" />
+      <path
+         id="path17780"
+         style="fill:none;stroke:#000000;stroke-width:0.66657184;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 226.8407,121.58086 v 6.0916" />
+    </g>
+    <g
+       id="g18497"
+       inkscape:export-filename="C:\Users\sirdo\Projects\Godot\ldjam51\Assets\lineart\explosion.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <circle
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.64583335;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+         id="path18410"
+         cx="183.49005"
+         cy="38.587845"
+         r="29.323673" />
+      <path
+         sodipodi:type="star"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:10.00000019;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+         id="path18306"
+         inkscape:flatsided="false"
+         sodipodi:sides="6"
+         sodipodi:cx="638.81824"
+         sodipodi:cy="370.06259"
+         sodipodi:r1="149.18655"
+         sodipodi:r2="52.824272"
+         sodipodi:arg1="-1.5707963"
+         sodipodi:arg2="-1.0471976"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="m 638.81824,220.87604 26.41213,103.43939 102.78721,-28.84611 -76.37507,74.59327 76.37507,74.59328 -102.7872,-28.84612 -26.41215,103.4394 -26.41213,-103.4394 -102.78721,28.84612 76.37508,-74.59328 -76.37508,-74.59328 102.78721,28.84612 z"
+         transform="matrix(0.26458333,0,0,0.26458333,14.469401,-59.324545)"
+         inkscape:transform-center-x="3.1691374e-06"
+         inkscape:transform-center-y="-1.8358574e-06" />
+      <circle
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.64583335;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+         id="circle18492"
+         cx="183.49005"
+         cy="38.587845"
+         r="17.378674" />
+    </g>
+    <g
+       id="g18521"
+       transform="translate(-20.125577,78.068594)"
+       inkscape:export-filename="C:\Users\sirdo\Projects\Godot\ldjam51\Assets\lineart\player2.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.64583;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+      <rect
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.64583335;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="rect18517"
+         width="5.0149117"
+         height="10.780837"
+         x="179.79649"
+         y="87.109161" />
+      <path
+         id="path18519"
+         style="opacity:1;stroke-width:2.64583335;stroke-linecap:square;stroke-linejoin:round;paint-order:stroke fill markers;stroke-miterlimit:4;stroke-dasharray:none"
+         inkscape:transform-center-x="2.6295326e-06"
+         inkscape:transform-center-y="0.447075"
+         d="m 182.30395,93.381138 c -0.57967,0 -5.10378,-2.780525 -5.39362,-3.314932 -0.28984,-0.534407 -0.28984,-6.09546 0,-6.629865 0.28984,-0.534407 4.81395,-3.314933 5.39362,-3.314933 0.57968,0 5.10379,2.780526 5.39363,3.314933 0.28984,0.534405 0.28984,6.095458 0,6.629865 -0.28984,0.534405 -4.81395,3.314932 -5.39363,3.314932 z" />
+    </g>
+    <g
+       id="g19334"
+       transform="rotate(-90,188.65793,77.901481)"
+       inkscape:export-filename="C:\Users\sirdo\Projects\Godot\ldjam51\Assets\lineart\tank2.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.64583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="rect19330"
+         width="10.843653"
+         height="10.843653"
+         x="170.25706"
+         y="46.600861"
+         ry="3.4149857" />
+      <path
+         id="path19358"
+         style="opacity:1;fill:#ffffff;stroke:#000000;stroke-width:2.64583;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+         inkscape:transform-center-x="4.2381745e-06"
+         d="m 175.71224,66.664049 c -0.41997,0 -0.7526,-4.161882 -1.11631,-4.371866 -0.3637,-0.209987 -4.13432,1.582885 -4.3443,1.219181 -0.20998,-0.363704 3.22799,-2.732717 3.22799,-3.152687 4.46524,2e-6 0,0 4.46524,2e-6 0,0.419968 3.43798,2.788981 3.228,3.152685 -0.20999,0.363704 -3.9806,-1.429168 -4.34431,-1.219181 -0.3637,0.209984 -0.69634,4.371866 -1.11631,4.371866 z"
+         sodipodi:nodetypes="sssccsss" />
+      <rect
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.6246;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="rect19332"
+         width="4.1651053"
+         height="9.3040361"
+         x="173.59633"
+         y="50.709488"
+         ry="1.0073525" />
+    </g>
+    <g
+       id="g24285"
+       transform="rotate(-90,103.03688,87.811612)"
+       inkscape:export-filename="C:\Users\sirdo\Projects\Godot\ldjam51\Assets\lineart\tank.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <path
+         id="path22828"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.32292;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         d="m 97.888173,79.904574 v 3.953332 l 5.149087,3.954081 5.14833,-3.954081 v -3.953332 z m 5.149087,7.907413 -5.149087,3.953331 v 3.953332 h 10.297417 v -3.953332 z" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1.32292;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 100.19191,83.224224 2.84519,2.184871 2.84476,-2.184871 z"
+         id="path24085"
+         sodipodi:nodetypes="cccc" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1.32241;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 103.03751,90.924718 -7.7e-4,2.739529"
+         id="path25467" />
+    </g>
+    <g
+       id="g25668"
+       transform="rotate(-90,110.14239,94.917122)"
+       inkscape:export-filename="C:\Users\sirdo\Projects\Godot\ldjam51\Assets\lineart\tank2.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <path
+         id="path19358-5"
+         style="display:inline;fill:#ffffff;stroke:#000000;stroke-width:2.28874;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+         inkscape:transform-center-x="6.4409199e-06"
+         d="m 103.03688,101.03305 c -0.36075,0 -0.64648,-3.6255 -0.9589,-3.808422 -0.31241,-0.182924 -3.551336,1.378886 -3.731706,1.062056 -0.180372,-0.316831 2.772806,-2.38053 2.772806,-2.746375 3.83561,1e-6 0,0 3.83561,1e-6 0,0.365844 2.95318,2.429543 2.77281,2.746374 -0.18038,0.31683 -3.41929,-1.24498 -3.73172,-1.062056 -0.31241,0.182922 -0.59815,3.808422 -0.9589,3.808422 z"
+         sodipodi:nodetypes="sssccsss" />
+      <path
+         id="path25662"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.32292;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         d="m 97.888173,79.904574 v 3.953332 l 5.149087,3.954081 5.14833,-3.954081 v -3.953332 z m 5.149087,7.907413 -5.149087,3.953331 v 3.953332 h 10.297417 v -3.953332 z" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1.32241;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 104.40689,93.882368 -2.73953,-7.7e-4"
+         id="path25666" />
+    </g>
+  </g>
+</svg>

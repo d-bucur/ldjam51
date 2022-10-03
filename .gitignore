@@ -17,6 +17,5 @@ data_*/
 # End of https://www.toptal.com/developers/gitignore/api/godot
 
 /Export
-
-# Temporary
-/Assets
+/Assets/Audio
+/Assets/placeholder
