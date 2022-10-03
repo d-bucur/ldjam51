@@ -2,8 +2,11 @@
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://Assets/lineart/player.png" type="Texture" id=2]
-[ext_resource path="res://Assets/lineart/player2.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/SlowmoArea.tscn" type="PackedScene" id=4]
+
+[sub_resource type="StreamTexture" id=4]
+flags = 4
+load_path = "res://.import/player2.png-2e5d133354389bd6621ef72015e4efed.stex"
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
@@ -12,7 +15,7 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"frames": [ ExtResource( 2 ), SubResource( 4 ) ],
 "loop": true,
 "name": "walk",
 "speed": 5.0
@@ -25,10 +28,13 @@ height = 12.0
 [sub_resource type="CircleShape2D" id=2]
 radius = 84.006
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="RigidBody2D"]
 collision_layer = 25
 collision_mask = 2
+mode = 2
+gravity_scale = 0.0
 script = ExtResource( 1 )
+speed = 5000
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 3 )

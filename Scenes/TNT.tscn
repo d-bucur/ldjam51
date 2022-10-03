@@ -8,10 +8,11 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 25.0001, 20.4999 )
 
-[node name="TNT" type="KinematicBody2D" groups=["enemies"]]
+[node name="TNT" type="RigidBody2D" groups=["enemies"]]
 position = Vector2( 662, 400 )
 collision_layer = 48
 collision_mask = 33
+mode = 2
 script = ExtResource( 2 )
 explosion_template = ExtResource( 3 )
 

@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends RigidBody2D
 
 export(PackedScene) var projectile_template
 export(PackedScene) var powerup_template
@@ -10,7 +10,7 @@ signal enemy_killed
 signal projectile_hit
 signal lance_triggered
 
-var player: KinematicBody2D
+var player: PhysicsBody2D
 var tween: SceneTreeTween
 var ready_to_shoot = false
 
@@ -42,7 +42,7 @@ func rotate_to_player_tween():
 			dest_rotation -= PI/2
 		tween.tween_property($".", "rotation", dest_rotation, 2)
 	else:
-		print("Could not find player")
+		print_debug("Could not find player")
 	
 	
 func kill():

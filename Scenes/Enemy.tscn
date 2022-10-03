@@ -12,10 +12,12 @@
 radius = 25.0
 height = 7.8102
 
-[node name="Enemy" type="KinematicBody2D" groups=["enemies"]]
+[node name="Enemy" type="RigidBody2D" groups=["enemies"]]
 position = Vector2( 690, 379 )
 collision_layer = 58
 collision_mask = 33
+mode = 2
+gravity_scale = 0.0
 script = ExtResource( 1 )
 projectile_template = ExtResource( 2 )
 powerup_template = ExtResource( 5 )

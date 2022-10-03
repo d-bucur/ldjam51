@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends RigidBody2D
 
 export var speed = 25000
 
@@ -8,12 +8,13 @@ signal lance_triggered
 
 var enemies_in_movement_area = {}  # not just enemies but draggable objects
 var dragging_objects = {}
-var speed_actual = speed
+var speed_actual
 
 func _ready():
 	get_tree().call_group("enemies", "set_player", self)
+	speed_actual = speed
 
-func _process(delta):
+func _physics_process(delta):
 	var velocity = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	
 	if velocity.length() > 1:
@@ -21,24 +22,22 @@ func _process(delta):
 	velocity *= speed_actual * delta
 	
 	if velocity.length() > 0:
-		move_and_slide(velocity)
+		apply_central_impulse(velocity)
 		$Sprite.animation = "walk"
 	else:
 		$Sprite.animation = "idle"
 	
 	if Input.is_action_just_pressed("drag"):
-		print("Started dragging")
 		for enemy in enemies_in_movement_area.keys():
 			dragging_objects[enemy] = enemies_in_movement_area[enemy]
 			
 	if Input.is_action_just_released("drag"):
-		print("Released dragging")
 		dragging_objects.clear()
 		
 	if Input.is_action_pressed("drag"):
 		for enemy in dragging_objects.values():
 			if is_instance_valid(enemy):
-				enemy.move_and_slide(velocity)
+				enemy.apply_central_impulse(velocity)
 		
 func kill():
 	print("Player killed")
