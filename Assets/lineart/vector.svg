@@ -32,9 +32,9 @@
      inkscape:snap-object-midpoints="true"
      units="px"
      inkscape:snap-smooth-nodes="true"
-     inkscape:zoom="3.6203867"
-     inkscape:cx="425.64514"
-     inkscape:cy="374.95995"
+     inkscape:zoom="1.8101934"
+     inkscape:cx="694.40096"
+     inkscape:cy="228.42864"
      inkscape:window-width="2048"
      inkscape:window-height="1082"
      inkscape:window-x="388"
@@ -201,25 +201,6 @@
        inkscape:export-filename="C:\Users\sirdo\Projects\Godot\ldjam51\Assets\lineart\city.png"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96">
-      <g
-         id="g19238">
-        <rect
-           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:3.28577;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-           id="rect16500"
-           width="6.1739259"
-           height="6.6069474"
-           x="220.76186"
-           y="41.317173"
-           ry="0.92480606" />
-        <rect
-           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:3.28577;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-           id="rect16498"
-           width="11.509375"
-           height="11.509375"
-           x="219.73645"
-           y="47.228123"
-           ry="1.728388" />
-      </g>
       <path
          id="path16608"
          style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:3.28577;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
@@ -227,9 +208,26 @@
          inkscape:export-filename="C:\Users\sirdo\Projects\Godot\ldjam51\Assets\lineart\shield.png"
          inkscape:export-xdpi="96"
          inkscape:export-ydpi="96" />
+      <g
+         id="g19238">
+        <path
+           id="rect16498"
+           style="opacity:1;fill:#ffffff;stroke:#000000;stroke-width:3.28577;stroke-linecap:square;stroke-linejoin:round;paint-order:stroke fill markers"
+           d="m 217.81119,48.542432 5.8663,4.363918 v -4.363918 l 5.727,4.363918 v -9.064114 h 3.31739 v 14.895259 h -14.91069 z"
+           sodipodi:nodetypes="ccccccccc" />
+      </g>
+      <rect
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.65715471;stroke-linecap:square;stroke-linejoin:miter;paint-order:fill markers stroke;stroke-miterlimit:4;stroke-dasharray:none"
+         id="rect2627"
+         width="9.4979391"
+         height="2.8237116"
+         x="220.71002"
+         y="54.2579"
+         ry="1.4118558"
+         rx="0" />
     </g>
     <circle
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.32291996;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:10.58335964,10.58335964;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.32292;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:10.5834, 10.5834;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
        id="path17036"
        cx="194.07785"
        cy="111.36285"
@@ -249,12 +247,12 @@
     <g
        id="g17955"
        transform="matrix(1.9846573,0,0,1.9846573,-212.45073,-120.90984)"
-       style="stroke-width:0.66657184;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.666572;stroke-miterlimit:4;stroke-dasharray:none"
        inkscape:export-filename="C:\Users\sirdo\Projects\Godot\ldjam51\Assets\lineart\crosshair2.png"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96">
       <circle
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.66657184;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.666572;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
          id="circle17545"
          cx="226.84071"
          cy="135.96083"
@@ -264,19 +262,19 @@
          inkscape:export-ydpi="96" />
       <path
          id="path17660"
-         style="fill:none;stroke:#000000;stroke-width:0.66657184;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:none;stroke:#000000;stroke-width:0.666572;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 235.12856,135.96083 h 6.09211" />
       <path
          id="path17785"
-         style="fill:none;stroke:#000000;stroke-width:0.66657184;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:none;stroke:#000000;stroke-width:0.666572;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 212.46074,135.96083 h 6.0916" />
       <path
          id="path17742"
-         style="fill:none;stroke:#000000;stroke-width:0.66657184;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:none;stroke:#000000;stroke-width:0.666572;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 226.8407,144.24919 v 6.09161" />
       <path
          id="path17780"
-         style="fill:none;stroke:#000000;stroke-width:0.66657184;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:none;stroke:#000000;stroke-width:0.666572;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 226.8407,121.58086 v 6.0916" />
     </g>
     <g
@@ -285,14 +283,14 @@
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96">
       <circle
-         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.64583335;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.64583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
          id="path18410"
          cx="183.49005"
          cy="38.587845"
          r="29.323673" />
       <path
          sodipodi:type="star"
-         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:10.00000019;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
          id="path18306"
          inkscape:flatsided="false"
          sodipodi:sides="6"
@@ -309,7 +307,7 @@
          inkscape:transform-center-x="3.1691374e-06"
          inkscape:transform-center-y="-1.8358574e-06" />
       <circle
-         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.64583335;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.64583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
          id="circle18492"
          cx="183.49005"
          cy="38.587845"
@@ -323,7 +321,7 @@
        inkscape:export-ydpi="96"
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.64583;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
       <rect
-         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.64583335;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.64583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
          id="rect18517"
          width="5.0149117"
          height="10.780837"
@@ -331,7 +329,7 @@
          y="87.109161" />
       <path
          id="path18519"
-         style="opacity:1;stroke-width:2.64583335;stroke-linecap:square;stroke-linejoin:round;paint-order:stroke fill markers;stroke-miterlimit:4;stroke-dasharray:none"
+         style="opacity:1;stroke-width:2.64583;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke fill markers"
          inkscape:transform-center-x="2.6295326e-06"
          inkscape:transform-center-y="0.447075"
          d="m 182.30395,93.381138 c -0.57967,0 -5.10378,-2.780525 -5.39362,-3.314932 -0.28984,-0.534407 -0.28984,-6.09546 0,-6.629865 0.28984,-0.534407 4.81395,-3.314933 5.39362,-3.314933 0.57968,0 5.10379,2.780526 5.39363,3.314933 0.28984,0.534405 0.28984,6.095458 0,6.629865 -0.28984,0.534405 -4.81395,3.314932 -5.39363,3.314932 z" />
