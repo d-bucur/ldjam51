@@ -22,4 +22,4 @@
 - kill enemies when falling off level
 
 ## other
-- config github actions to publish to itch.io
+- config github actions to publish to itch.io https://murphysdad.itch.io/survive-the-island/devlog/406823/godot-ci-to-publish-from-github-to-itchio

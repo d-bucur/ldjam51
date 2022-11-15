@@ -3,6 +3,8 @@ Made for Ludum Dare #51. Theme: Every 10 seconds
 
 https://ldjam.com/events/ludum-dare/51/wip
 
+[Gameplay video](https://www.youtube.com/watch?v=qzzRaJnkicI)
+
 
 ## 🎯 Description
 

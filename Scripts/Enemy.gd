@@ -45,11 +45,8 @@ func shoot():
 func rotate_to_player_tween():
 	if is_instance_valid(player):
 		dest_rotation = player.position.angle_to_point(position)
-		
-		# TODO BUG: not using fastest rotation
-		if dest_rotation - dest_rotation >= PI/2:
-			dest_rotation -= PI/2
-		
+		var diff_wrapped = wrapf(dest_rotation - rotation, -PI, PI)
+		dest_rotation = rotation + diff_wrapped
 		var tween = get_tree().create_tween()
 		tween.tween_property($".", "rotation", dest_rotation, 1)
 	else:
